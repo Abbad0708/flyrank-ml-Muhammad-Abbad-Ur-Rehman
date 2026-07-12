@@ -76,3 +76,38 @@ Best model: `random_forest` selected by `precision_at_50`.
 
 Use the ranked queue as a reviewer aid, not as an automatic publishing decision.
 The safest first production use is to inspect high-confidence rows, verify the page manually, and compare the recommendation against editorial context.
+
+
+## Submission
+
+Submission checklist and reproduction instructions for reviewers:
+
+- Repository URL: https://github.com/your-username/your-repo  <!-- REPLACE with your public repo URL -->
+- Commit: `<git commit hash>`  <!-- REPLACE with the commit hash you are submitting -->
+- Notebooks executed (top→bottom): `notebooks/01_first_look_and_discovery.ipynb`, `notebooks/02_your_first_readable_model.ipynb`
+
+Reproduce locally (recommended):
+
+```bash
+pip install -r requirements.txt
+python -m pip install jupyter nbconvert
+# to execute notebooks (creates executed notebook outputs in-place)
+jupyter nbconvert --to notebook --execute notebooks/01_first_look_and_discovery.ipynb
+jupyter nbconvert --to notebook --execute notebooks/02_your_first_readable_model.ipynb
+# or run the pipeline script
+python scripts/run_all.py
+```
+
+Quick links inside the repo (edit these after making the repo public):
+
+- Notebook 1: `notebooks/01_first_look_and_discovery.ipynb`
+- Notebook 2: `notebooks/02_your_first_readable_model.ipynb`
+- This report: `outputs/model_report.md`
+
+Notes for reviewers:
+
+- The model was trained on the anonymized starter dataset (`data/raw/content_refresh_anonymized.csv`).
+- Key metric used for selection: `Precision@50` (random_forest selected).
+- Known limitations: small starter dataset, client-holdout split can still leak some temporal patterns, and results are illustrative.
+
+If you want, I attached the executed notebooks and this report as a ZIP; otherwise reviewers can open the notebooks in the repo link above.
