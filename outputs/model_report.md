@@ -82,11 +82,6 @@ The safest first production use is to inspect high-confidence rows, verify the p
 
 Submission checklist and reproduction instructions for reviewers:
 
-- Repository URL: https://github.com/your-username/your-repo  <!-- REPLACE with your public repo URL -->
-- Commit: `<git commit hash>`  <!-- REPLACE with the commit hash you are submitting -->
-- Notebooks executed (top→bottom): `notebooks/01_first_look_and_discovery.ipynb`, `notebooks/02_your_first_readable_model.ipynb`
-
-Reproduce locally (recommended):
 
 ```bash
 pip install -r requirements.txt
